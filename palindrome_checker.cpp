@@ -19,7 +19,6 @@ int main()
 
     // print input and reversal
     std::cout << std::endl << input << " - " << reversal << std::endl;
-    //std::cout << "input size:" << input.size() << "  reversal size: " << reversal.size() << std::endl;
 
     // determine difference
     int similarity_count = 0;
@@ -33,7 +32,7 @@ int main()
     if (similarity_count == input.size()) {
         std::cout << "It's a palindrome!";
     }
-    else if (similarity_count >= input.size() - 3) {
+    else if (similarity_count < input.size() && similarity_count > input.size() - 2) {
         std::cout << "Almost a palindrome!";
     }
     else {
